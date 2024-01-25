@@ -104,6 +104,12 @@ DATABASES = {
         conn_max_age=600
     )
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 
@@ -162,12 +168,12 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_BACKEND=config('EMAIL_BACKEND',default='django.core.mail.backends.smtp.EmailBackend')
-EMAIL_HOST=config('EMAIL_HOST', default='localhost')
-EMAIL_USE_TLS=config('EMAIL_USE_TLS',default=False, cast=bool)
-EMAIL_PORT=config('EMAIL_PORT', default=25, cast=int)
-EMAIL_HOST_USER=config('EMAIL_HOST_USER',default='')
-EMAIL_HOST_PASSWORD=config('EMAIL_HOST_PASSWORD')
+EMAIL_BACKEND = config('EMAIL_BACKEND',default='django.core.mail.backends.smtp.EmailBackend')
+EMAIL_HOST = config('EMAIL_HOST', default='localhost')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS',default=False, cast=bool)
+EMAIL_PORT = config('EMAIL_PORT', default=25, cast=int)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER',default='')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD',default='')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap4'
